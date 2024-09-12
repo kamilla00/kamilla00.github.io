@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Задание 1</title>
+</head>
+<body>
+<h1>Список гиперссылок</h1>
+<ul>
+    <li><a href="http://kubsu.ru">Абсолютная гиперссылка на главную страницу сайта kubsu.ru</a></li>
+    <li><a href="https://kubsu.ru">Абсолютная гиперссылка на главную сайта kubsu.ru в протоколе https</a></li>
+    <li><a href="https://kubsu.ru"><img src="https://rai77.com/upload/000/u1/1/7/babochka-nashla-samoe-bezopasnoe-mesto-sovershiv-posadku-na-nosu-druzhelyubnogo-psa-foto-big.jpg" height="25%" width="25%" alt="Ссылка на собаку"></a></li>
+    <li><a href="/index">Сокращенная ссылка на внутреннюю страницу</a></li>
+    <li><a href="/">Сокращенная ссылка на главную страницу</a></li>
+    <li><a href="#">Ссылка на фрагмент текущей страницы</a></li>
+    <li><a href="https://mysite.com/?p1=a1&p2=a2&p3=a3">Ссылка с тремя параметрами в URL</a></li>
+    <li><a href="/?id=gpus">Ссылка с параметром id в URL</a></li>
+    <li><a href="./index">Относительная ссылка на страницу в текущем каталоге</a></li>
+    <li><a href="/about">Относительная ссылка на страницу в каталоге about</a></li>
+    <li><a href="../index">Относительная ссылка на страницу в каталоге уровнем выше текущего</a></li>
+    <li><a href="../../index">Относительная ссылка на страницу в каталоге двумя уровнями выше</a></li>
+    <li><p>Контекстная <a href="/">ссылка</a> в тексте абзаца</p></li>
+    <li><a href="https://www.jetbrains.com/ru-ru/products/#type=team">Ссылка на фрагмент страницы стороннего сайта</a></li>
+    <li>
+        <img src="https://rai77.com/upload/000/u1/1/7/babochka-nashla-samoe-bezopasnoe-mesto-sovershiv-posadku-na-nosu-druzhelyubnogo-psa-foto-big.jpg" alt="Ссылка на собаку" height="25%" width="25%" usemap="#dog">
+        <map name="dog">
+            <area shape="circle" coords="0,0,200,200" alt="circle" href="https://kubsu.ru/?ysclid=lnj147f28l349612809">
+            <area shape="rect" coords="200,0,400,200" alt="rect" href="https://kubsu.ru/ru/fktipm">
+        </map>
+    </li>
+    <li><a href="">Ссылка с пустым href</a></li>
+    <li><a>Ссылка без href</a></li>
+    <li><a href="/" rel="nofollow">Ссылка, по которой запрещен переход поисковикам</a></li>
+    <li><a href="/" rel="noindex">Запрещенная для индексации поисковиками</a></li>
+</ul>
+<ol>
+    <li><a href="/">title</a></li>
+    <li><a href="/">title</a></li>
+    <li><a href="/">title</a></li>
+</ol>
+<ul>
+    <li><a href="">Ссылка на файл на сервере FTP с авторизацией</a></li>
+</ul>
+
+
+<h1>Форма</h1>
+<form action="#" method="post">
+    <label for="fio">ФИО:</label>
+    <input type="text" id="fio" name="fio" required><br>
+
+    <label for="phone">Телефон:</label>
+    <input type="tel" id="phone" name="phone"><br>
+
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" name="email"><br>
+
+    <label for="birthdate">Дата рождения:</label>
+    <input type="date" id="birthdate" name="birthdate"><br>
+
+    <label>Пол:</label>
+    <input type="radio" id="male" name="gender" value="male" checked>
+    <label for="male">Мужской</label>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Женский</label><br>
+
+    <label for="programming-languages">Любимый язык программирования:</label>
+    <select id="programming-languages" name="programming-languages[]" multiple>
+        <option value="Pascal">Pascal</option>
+        <option value="C">C</option>
+        <option value="C++">C++</option>
+        <option value="JavaScript">JavaScript</option>
+        <option value="PHP">PHP</option>
+        <option value="Python">Python</option>
+        <option value="Java">Java</option>
+        <option value="Haskell">Haskell</option>
+        <option value="Clojure">Clojure</option>
+        <option value="Prolog">Prolog</option>
+        <option value="Scala">Scala</option>
+    </select><br>
+    <label for="biography">Биография:</label><br>
+    <textarea id="biography" name="biography" rows="4" cols="50"></textarea><br>
+
+    <input type="checkbox" id="contract" name="contract" required>
+    <label for="contract">С контрактом ознакомлен(а)</label><br>
+
+    <input type="submit" value="Сохранить">
+</form>
+</body>
+</html>
