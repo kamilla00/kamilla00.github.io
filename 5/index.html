@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Задание №5</title>
+    <style>
+        body {
+            background-color: #000000;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .calculator {
+            background-color: #444444;
+            width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            text-align: left;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        select, input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 100%;
+            background-color: #ffffff;
+            color: #000000;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #444444;
+        }
+
+        #totalPrice {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<header class="full-width-header" style="display: flex; align-items: center;">
+    <div class="logo" style="margin-right: 20px;">
+        <img src="dog_with_butterfly.jpg" alt="Логотип" style="width: 100px; height: auto;">
+    </div>
+    <div class="site-title">
+        <h1 style="text-align: center; color: white;">Задание №5</h1>
+    </div>
+</header>
+<body>
+<div class="calculator">
+    <h1>Калькулятор стоимости заказа</h1>
+    <label for="product">Выберите товар:</label>
+    <select id="product">
+        <option value="Mercedes benz C-class">Mercedes benz C-class - 6,000,000 рублей.</option>
+        <option value="Mercedes benz E-class">Mercedes benz E-class - 10,000,000 рублей.</option>
+        <option value="Mercedes benz S-class">Mercedes benz S-class - 15,000,000 рублей.</option>
+    </select>
+    <label for="quantity">Количество:</label>
+    <input type="number" id="quantity" placeholder="1" style="width: 780px;" value="1" onkeyup="if (event.keyCode === 13) calculateTotal();"/>
+    <button onclick="calculateTotal()" style="margin-top: 10px;">Подсчитать стоимость</button>
+    <p id="totalPrice">Общая стоимость: 0 рублей.</p>
+</div>
+
+<script>
+    function calculateTotal() {
+        const productSelect = document.getElementById('product');
+        const quantityInput = document.getElementById('quantity');
+        const totalPriceElement = document.getElementById('totalPrice');
+
+        const selectedProduct = productSelect.value;
+        const quantity = parseInt(quantityInput.value);
+
+        let price = 0;
+        if (quantity <= 0) {
+            totalPriceElement.textContent = "Ошибка: Количество должно быть больше 0.";
+            return;
+        }
+        if (selectedProduct === 'Mercedes benz C-class') {
+            price = 6000000;
+        } else if (selectedProduct === 'Mercedes benz E-class') {
+            price = 10000000;
+        } else if (selectedProduct === 'Mercedes benz S-class') {
+            price = 15000000;
+        }
+
+        const total = price * quantity;
+
+        totalPriceElement.textContent = `Общая стоимость: ${total.toLocaleString()} рублей.`;
+    }
+</script>
+</body>
+</html>
