@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <title>Задание 8</title>
+</head>
+
+<body>
+<button data-modal-target="#modal" id="showForm">Форма</button>
+
+<div class="modal" id="modal">
+
+  <form
+          class="modal-body formcarryForm"
+          id="myForm"
+          action="https://formcarry.com/s/XL7Xf8kfFe"
+          enctype="multipart/form-data"
+  >
+    <label for="name">ФИО:</label>
+    <input type="text" id="name" name="name" required autocomplete="off">
+
+    <label for="email">Email:</label>
+    <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            autocomplete="off"
+    >
+
+    <label for="phone">Телефон:</label>
+    <input type="tel" id="phone" name="phone" autocomplete="off">
+
+    <label for="organization">Организация:</label>
+    <input
+            type="text"
+            id="organization"
+            name="organization"
+            autocomplete="off"
+    >
+
+    <label for="message">Сообщение:</label>
+    <textarea
+            id="message"
+            class="text-area"
+            name="message"
+            required
+            autocomplete="off"
+    >
+            </textarea>
+
+    <div>
+      <label for="agree">Согласие с политикой обработки персональных данных:</label>
+      <input type="checkbox" id="agree" name="agree" required>
+    </div>
+
+    <button type="submit" id="submitForm">Отправить</button>
+  </form>
+</div>
+<div id="overlay"></div>
+<script src="anim.js"></script>
+<script src="storage.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
