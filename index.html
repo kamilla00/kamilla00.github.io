@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма заявки</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .section-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-top: 15px;
+            display: block;
+        }
+        textarea {
+            width: 100%;
+            height: 100px;
+        }
+        .form-container {
+            text-align: center;
+        }
+        button {
+            font-size: 1.2em;
+            font-weight: bold;
+            padding: 10px 20px;
+            margin-top: 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Стили для выравнивания радио и чекбоксов */
+        .radio-group, .checkbox-group {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            margin-bottom: 10px;
+        }
+        .radio-group label, .checkbox-group label {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+        }
+        input[type="radio"], input[type="checkbox"] {
+            width: 16px;
+            height: 16px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Заполните форму</h1>
+
+<form action="submit.php" method="POST">
+    <label for="name">ФИО:</label>
+    <input type="text" name="name" required><br>
+
+    <label for="phone">Телефон:</label>
+    <input type="tel" name="phone" required><br>
+
+    <label for="email">Email:</label>
+    <input type="email" name="email" required><br>
+
+    <label for="dob">Дата рождения:</label>
+    <input type="date" name="dob" required><br>
+
+    <span class="section-title">Пол:</span>
+    <div class="radio-group">
+        <label><input type="radio" name="gender" value="Male" required> Мужчина</label>
+        <label><input type="radio" name="gender" value="Female" required> Женщина</label>
+    </div>
+
+    <span class="section-title">Любимый язык программирования:</span>
+    <div class="checkbox-group">
+        <label><input type="checkbox" name="languages[]" value="Pascal"> Pascal</label>
+        <label><input type="checkbox" name="languages[]" value="C"> C</label>
+        <label><input type="checkbox" name="languages[]" value="C++"> C++</label>
+        <label><input type="checkbox" name="languages[]" value="JavaScript"> JavaScript</label>
+        <label><input type="checkbox" name="languages[]" value="PHP"> PHP</label>
+        <label><input type="checkbox" name="languages[]" value="Python"> Python</label>
+        <label><input type="checkbox" name="languages[]" value="Java"> Java</label>
+        <label><input type="checkbox" name="languages[]" value="Haskell"> Haskell</label>
+        <label><input type="checkbox" name="languages[]" value="Clojure"> Clojure</label>
+        <label><input type="checkbox" name="languages[]" value="Prolog"> Prolog</label>
+        <label><input type="checkbox" name="languages[]" value="Scala"> Scala</label>
+        <label><input type="checkbox" name="languages[]" value="Go"> Go</label>
+    </div>
+
+    <span class="section-title">Биография:</span><br>
+    <textarea name="bio" required></textarea><br>
+
+    <label><input type="checkbox" name="contract"> С контрактом ознакомлен</label><br>
+
+    <div class="form-container">
+        <button type="submit">Сохранить</button>
+    </div>
+</form>
+
+</body>
+</html>
