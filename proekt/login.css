@@ -1,0 +1,119 @@
+/* Page background & centering */
+body {
+    margin: 0;
+    background: #6A1B9A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #4A148C;
+}
+
+/* Container for both forms */
+.page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+}
+
+/* Shared form styles */
+.login-form,
+.register-form {
+    width: 100%;
+    background: white;
+    border: none;
+    border-radius: 15px;
+    padding: 2.5rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Title */
+.form-title {
+    margin: 0;
+    color: #4A148C;
+    font-size: 2em;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* Form group (label + input) */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* Labels */
+.form-label {
+    color: #4A148C;
+    font-size: 0.95em;
+    font-weight: 500;
+}
+
+/* Inputs and selects */
+.form-input {
+    padding: 12px;
+    border: 1px solid #D1C4E9;
+    border-radius: 8px;
+    background: transparent;
+    color: #4A148C;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #6A1B9A;
+    box-shadow: 0 0 0 2px rgba(106, 27, 154, 0.1);
+}
+
+/* Error message */
+.error-message {
+    background: #fce4ec;
+    color: #C62828;
+    border: 1px solid #ef9a9a;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1em;
+}
+
+/* Actions wrapper */
+.form-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+/* Buttons */
+.buttons {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #6A1B9A;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 14px 20px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.buttons:hover {
+    background: #4A148C;
+}
+
+/* Prompt in register form */
+.register-prompt {
+    margin: 0;
+    text-align: center;
+    color: #6A1B9A;
+    font-size: 1em;
+}
